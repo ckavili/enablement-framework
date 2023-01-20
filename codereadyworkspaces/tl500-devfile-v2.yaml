@@ -7,6 +7,8 @@ attributes:
     name: devworkspace-config
     namespace: tl500-workspaces
   controller.devfile.io/storage-type: per-workspace
+  dw.metadata.annotations:
+    che.eclipse.org/che-editor: eclipse/che-theia/latest
   metadata-name-field: generateName
   metadata-name-original-value: tl500-
 projects:
@@ -30,15 +32,11 @@ components:
       mountSources: true
       sourceMapping: /projects
       volumeMounts:
-        - name: projects
-          path: /projects
         - name: config
           path: /home/developer/.config
         - name: npm
           path: /home/developer/.npm
     name: stack-tl500
-  - name: projects
-    volume: {}
   - name: config
     volume: {}
   - name: npm
