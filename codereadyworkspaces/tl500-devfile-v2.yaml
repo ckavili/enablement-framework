@@ -32,11 +32,11 @@ components:
             discoverable: false
             type: main
             urlRewriteSupported: true
-            exposure: public
-            name: theia
-            protocol: https
-            secure: false
-            targetPort: 3100
+          exposure: public
+          name: theia
+          protocol: https
+          secure: false
+          targetPort: 3100
         - attributes:
             cookiesAuthEnabled: true
             discoverable: false
